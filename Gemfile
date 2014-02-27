@@ -2,7 +2,7 @@ source :rubygems
 
 # PostgreSQL driver
 gem 'pg'
-
+gem 'pry'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -16,6 +16,8 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
+
+gem 'bcrypt-ruby'
 
 group :test do
   gem 'faker'
