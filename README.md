@@ -5,3 +5,5 @@ In addition to the basic sinatra setup, in order to run tests, you need to creat
     RACK_ENV=test rake db:create
 
 This creates a test database for rspec to shove dummy data into, so that your tests do not pollute the regular database. 
+
+With love and help from https://github.com/tararoys
