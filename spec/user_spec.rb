@@ -70,6 +70,14 @@ describe User do
       expect(alyssa.valid?).to eq(false)
     end
 
+    it "Email format must be valid" do
+      zach = User.new(name: "Zach", email: "zach@dbc" )
+      expect(zach.valid?).to eq(false)
+
+      sara = User.new(name: "Sara", email: "sara@dbc.com")
+      expect(sara.valid?).to eq(true)
+    end
+
   end
 end
 
