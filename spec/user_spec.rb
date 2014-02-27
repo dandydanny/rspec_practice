@@ -6,7 +6,7 @@ require 'pry'
 
 describe User do
 
-  after do
+  after do # our janitor empties our database after every test
     User.delete_all
   end
 
@@ -63,6 +63,11 @@ describe User do
       alyssa.save!
 
       expect(alyssa.password).to eq("1234")
+    end
+
+    it "User must have a name" do
+      alyssa = User.new(name: "")
+      expect(alyssa.valid?).to eq(false)
     end
 
   end
